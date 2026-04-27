@@ -1,0 +1,10 @@
+@if (usuarioDetail) {
+    <div class="usuario-detail">
+        <img [src]="usuarioDetail.avatarUrl" alt="Avatar de {{ usuarioDetail.username }}" />
+        <h3>{{ usuarioDetail.username }}</h3>
+        <p>{{ usuarioDetail.email }}</p>
+        <p>{{ usuarioDetail.role }}</p>
+        <p>{{ usuarioDetail.location }}</p>
+        <p>{{ usuarioDetail.repoIds.length }}</p>
+    </div>
+}
