@@ -1,10 +1,10 @@
 <header class="usuario-list-header">
     <h1>Usuarios</h1>
-    <p class="usuario-list-count">{{ usuariosArray.length }} usuarios</p>
+    <p class="usuario-list-count">{{ usuariosArray().length }} usuarios</p>
 </header>
 
 <div class="usuario-list">
-    <article class="usuario-item" *ngFor="let usuario of usuariosArray">
+    <article class="usuario-item" *ngFor="let usuario of usuariosArray()">
         <img class="usuario-avatar" [src]="usuario.avatarUrl" alt="Avatar de {{ usuario.username }}" />
         <h3 class="usuario-name">{{ usuario.username }}</h3>
         <p class="usuario-email">{{ usuario.email }}</p>
