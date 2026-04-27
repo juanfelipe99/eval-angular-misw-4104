@@ -1,10 +1,16 @@
 @if (usuarioDetail) {
-    <div class="usuario-detail">
-        <img [src]="usuarioDetail.avatarUrl" alt="Avatar de {{ usuarioDetail.username }}" />
-        <h3>{{ usuarioDetail.username }}</h3>
-        <p>{{ usuarioDetail.email }}</p>
-        <p>{{ usuarioDetail.role }}</p>
-        <p>{{ usuarioDetail.location }}</p>
-        <p>{{ usuarioDetail.repoIds.length }}</p>
-    </div>
+    <section class="usuario-detail">
+        <button class="usuario-detail-close" type="button" (click)="onClose()" aria-label="Cerrar detalle">×</button>
+        <img class="usuario-detail-avatar" [src]="usuarioDetail.avatarUrl" alt="Avatar de {{ usuarioDetail.username }}" />
+        <div class="usuario-detail-info">
+            <div class="usuario-detail-top">
+                <h2 class="usuario-detail-username">Usuario: {{ usuarioDetail.username }}</h2>
+                <span class="usuario-detail-role"><strong>Rol:</strong> {{ usuarioDetail.role }}</span>
+            </div>
+            <p class="usuario-detail-name"><strong>Nombre:</strong> {{ usuarioDetail.name }}</p>
+            <p class="usuario-detail-email"><strong>Email:</strong> {{ usuarioDetail.email }}</p>
+            <p class="usuario-detail-location"><strong>Ubicación:</strong> {{ usuarioDetail.location }}</p>
+            <p class="usuario-detail-repos"><strong>Repos: {{ usuarioDetail.repoIds.length }}</strong></p>
+        </div>
+    </section>
 }

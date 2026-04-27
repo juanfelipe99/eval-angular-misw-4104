@@ -2,17 +2,14 @@
     <h1>Usuarios</h1>
     <p class="usuario-list-count">{{ usuariosArray().length }} usuarios</p>
 </header>
-    @if (selected()) {
-        <app-usuario-detail [usuarioDetail]="selectedUser()"></app-usuario-detail>
-    }
-<div>
+
+@if (selected()) {
+    <app-usuario-detail [usuarioDetail]="selectedUser()" (close)="onCloseDetail()"></app-usuario-detail>
+}
+
 <div class="usuario-list">
     <article class="usuario-item" *ngFor="let usuario of usuariosArray()">
         <img class="usuario-avatar" [src]="usuario.avatarUrl" alt="Avatar de {{ usuario.username }}" (click)="onSelected(usuario)" />
         <h3 class="usuario-name">{{ usuario.username }}</h3>
-        <p class="usuario-email">{{ usuario.email }}</p>
-        <span class="usuario-role">{{ usuario.role }}</span>
-        <p class="usuario-location">{{ usuario.location }}</p>
-        <p class="usuario-repo-ids"><strong>{{ usuario.repoIds.length }}</strong> repos</p>
     </article>
 </div>

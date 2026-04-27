@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, Input } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Usuarios } from '../usuarios';
 import { Usuario } from '../usuario';
 import { CommonModule } from '@angular/common';
@@ -31,5 +31,10 @@ export class UsuarioList implements OnInit {
   onSelected(usuario: Usuario) {
     this.selected.set(true);
     this.selectedUser.set(usuario);
+  }
+
+  onCloseDetail() {
+    this.selected.set(false);
+    this.selectedUser.set(undefined);
   }
 }
