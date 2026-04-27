@@ -1,1 +1,11 @@
-<p>usuario-list works!</p>
+<h1>Usuarios</h1>
+<div class="usuario-list" *ngFor="let usuario of usuariosArray">
+    <div class="usuario-item">
+        <img [src]="usuario.avatarUrl" alt="Avatar" />
+        <h3 class="usuario-name">{{ usuario.username }}</h3>
+        <p class="usuario-email">{{ usuario.email }}</p>
+        <p class="usuario-role">{{ usuario.role }}</p>
+        <p class="usuario-location">{{ usuario.location }}</p>
+        <p class="usuario-repo-ids">{{ usuario.repoIds.length }}</p>
+    </div>
+</div>
