@@ -1,13 +1,15 @@
 // Se utiliza una interfaz en lugar de una clase porque no se necesita implementar métodos o propiedades.
 
-export interface Usuario {
-    id: number;
-    username: string;
-    name: string;
-    user: string;
-    email: string;
-    avatarUrl: string;
-    role: string;
-    location: string;
-    repoIds: number[];
+export class Usuario {
+    constructor(
+        public id: number,
+        public username: string,
+        public name: string,
+        public user: string,
+        public email: string,
+        public avatarUrl: string,
+        public role: string,
+        public location: string,
+        public repoIds: number[]
+    ) {}
 }

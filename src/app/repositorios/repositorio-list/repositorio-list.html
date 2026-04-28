@@ -1,1 +1,7 @@
-<p>repositorio-list works!</p>
+<div class="repositorio-list">
+    @for (repositorio of repositoriosArray(); track repositorio.id) {
+        <article class="repositorio-item">
+            <h1 class="repositorio-name">{{ repositorio.name }}</h1>
+        </article>
+    }
+</div>
