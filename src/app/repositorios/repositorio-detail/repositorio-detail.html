@@ -1,0 +1,13 @@
+@if (repositorioDetail) {
+    <section class="repositorio-detail">
+        <button class="repositorio-detail-close" type="button" (click)="onClose()" aria-label="Cerrar detalle">×</button>
+        <div class="repositorio-detail-top">
+            <h2 class="repositorio-detail-name">{{ repositorioDetail.name }}</h2>
+            <span class="repositorio-detail-language"><strong>Lenguaje:</strong> {{ repositorioDetail.language }}</span>
+            <span class="repositorio-detail-stars"><strong>Estrellas:</strong> {{ repositorioDetail.stars }}</span>
+            <span class="repositorio-detail-createdAt"><strong>Creado:</strong> {{ repositorioDetail.createdAt }}</span>
+            <span class="repositorio-detail-ownerId"><strong>Propietario:</strong> {{ repositorioDetail.ownerId }}</span>
+        </div>
+        <p class="repositorio-detail-description"><strong>Descripción:</strong> {{ repositorioDetail.description }}</p>
+    </section>
+}
