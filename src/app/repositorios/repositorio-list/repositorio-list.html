@@ -1,7 +1,13 @@
+<header class="repositorio-list-header">
+    <h1>Repositorios</h1>
+    <p class="repositorio-list-count">{{ repositoriosArray().length }} repositorios</p>
+</header>
+
 <div class="repositorio-list">
     @for (repositorio of repositoriosArray(); track repositorio.id) {
         <article class="repositorio-item">
-            <h1 class="repositorio-name">{{ repositorio.name }}</h1>
+            <span class="repositorio-dot" aria-hidden="true"></span>
+            <span class="repositorio-name">{{ repositorio.name }}</span>
         </article>
     }
 </div>
