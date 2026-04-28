@@ -3,13 +3,9 @@
     <p class="repositorio-list-count">{{ repositoriosArray().length }} repositorios</p>
 </header>
 
-@if (selected()) {
-    <app-repositorio-detail [repositorioDetail]="selectedRepositorio()" (close)="onCloseDetail()"></app-repositorio-detail>
-}
-
 <div class="repositorio-list">
     @for (repositorio of repositoriosArray(); track repositorio.id) {
-        <article class="repositorio-item" (click)="onSelected(repositorio)">
+        <article class="repositorio-item" [routerLink]="['/repositorios', repositorio.id]">
             <span class="repositorio-dot" aria-hidden="true"></span>
             <span class="repositorio-name">{{ repositorio.name }}</span>
         </article>
